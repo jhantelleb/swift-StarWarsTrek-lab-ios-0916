@@ -3,6 +3,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,12 +19,137 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EHb-mm-ciX" userLabel="Star Trek Scroll View">
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="GsL-eX-3st">
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CaptainKirk" translatesAutoresizingMaskIntoConstraints="NO" id="Yld-o4-mNz"/>
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DrMcCoy" translatesAutoresizingMaskIntoConstraints="NO" id="p5t-cY-Tsb"/>
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Spock" translatesAutoresizingMaskIntoConstraints="NO" id="ph0-Wn-mlK"/>
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Uhuru" translatesAutoresizingMaskIntoConstraints="NO" id="lkR-cz-t8C"/>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="GsL-eX-3st" secondAttribute="height" multiplier="4:1" id="qmK-rL-qZx"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="GsL-eX-3st" secondAttribute="trailing" id="1rK-T0-Uc8"/>
+                                    <constraint firstItem="GsL-eX-3st" firstAttribute="height" secondItem="EHb-mm-ciX" secondAttribute="height" id="VNi-Au-LD3"/>
+                                    <constraint firstItem="GsL-eX-3st" firstAttribute="top" secondItem="EHb-mm-ciX" secondAttribute="top" id="qxQ-ir-eVW"/>
+                                    <constraint firstAttribute="width" secondItem="EHb-mm-ciX" secondAttribute="height" multiplier="1:1" id="sLF-Vl-zn6"/>
+                                    <constraint firstAttribute="bottom" secondItem="GsL-eX-3st" secondAttribute="bottom" id="tq4-h3-Wl8"/>
+                                    <constraint firstItem="GsL-eX-3st" firstAttribute="leading" secondItem="EHb-mm-ciX" secondAttribute="leading" id="w3V-Rw-lxa"/>
+                                </constraints>
+                            </scrollView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SpN-fm-CKN" userLabel="Star Wars Scroll View">
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="CsO-lO-4YJ">
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AnakinJedi" translatesAutoresizingMaskIntoConstraints="NO" id="cGb-tn-2py"/>
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Chewbacca" translatesAutoresizingMaskIntoConstraints="NO" id="G0U-b8-Q0w"/>
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HanSolo" translatesAutoresizingMaskIntoConstraints="NO" id="jT1-Vw-CAL"/>
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LukeSkywalker" translatesAutoresizingMaskIntoConstraints="NO" id="bfy-St-FZN"/>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="CsO-lO-4YJ" secondAttribute="height" multiplier="4:1" id="jNU-g4-cTo"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="CsO-lO-4YJ" firstAttribute="height" secondItem="SpN-fm-CKN" secondAttribute="height" id="0EG-Ej-9w5"/>
+                                    <constraint firstAttribute="bottom" secondItem="CsO-lO-4YJ" secondAttribute="bottom" id="L4h-lJ-ApF"/>
+                                    <constraint firstAttribute="width" secondItem="SpN-fm-CKN" secondAttribute="height" multiplier="1:1" id="XaS-hX-hLk"/>
+                                    <constraint firstItem="CsO-lO-4YJ" firstAttribute="top" secondItem="SpN-fm-CKN" secondAttribute="top" id="XeV-A1-7bY"/>
+                                    <constraint firstAttribute="trailing" secondItem="CsO-lO-4YJ" secondAttribute="trailing" id="gA3-zQ-wWA"/>
+                                    <constraint firstItem="CsO-lO-4YJ" firstAttribute="leading" secondItem="SpN-fm-CKN" secondAttribute="leading" id="pQ9-iO-cOO"/>
+                                </constraints>
+                            </scrollView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Star Trek" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ANR-r2-S96">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Star Wars" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bpd-Rw-wat">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="EHb-mm-ciX" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.6" id="1qD-v1-b6p"/>
+                            <constraint firstItem="SpN-fm-CKN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4lW-6Y-ErW"/>
+                            <constraint firstItem="Bpd-Rw-wat" firstAttribute="bottom" secondItem="SpN-fm-CKN" secondAttribute="top" id="5WS-6z-Clk"/>
+                            <constraint firstItem="SpN-fm-CKN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.4" id="6eb-VU-o1x"/>
+                            <constraint firstItem="Bpd-Rw-wat" firstAttribute="centerX" secondItem="SpN-fm-CKN" secondAttribute="centerX" id="77S-1i-lQ9"/>
+                            <constraint firstItem="SpN-fm-CKN" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.3" id="7ch-51-AzC"/>
+                            <constraint firstItem="EHb-mm-ciX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SWd-Pr-j2M"/>
+                            <constraint firstItem="ANR-r2-S96" firstAttribute="centerX" secondItem="EHb-mm-ciX" secondAttribute="centerX" id="rQf-H9-XSw"/>
+                            <constraint firstItem="EHb-mm-ciX" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.3" id="t0E-RU-akW"/>
+                            <constraint firstItem="ANR-r2-S96" firstAttribute="bottom" secondItem="EHb-mm-ciX" secondAttribute="top" id="vWZ-Jf-EJD"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="starTrekFour" destination="lkR-cz-t8C" id="Jzs-f5-7Oj"/>
+                        <outlet property="starTrekOne" destination="Yld-o4-mNz" id="Geb-Qt-zSn"/>
+                        <outlet property="starTrekScrollView" destination="EHb-mm-ciX" id="pMp-ZB-LpJ"/>
+                        <outlet property="starTrekThree" destination="ph0-Wn-mlK" id="hK5-ul-LRU"/>
+                        <outlet property="starTrekTwo" destination="p5t-cY-Tsb" id="02s-ad-XxP"/>
+                        <outlet property="starWarsFour" destination="bfy-St-FZN" id="mtO-5l-Dfl"/>
+                        <outlet property="starWarsOne" destination="cGb-tn-2py" id="49J-Bj-PBA"/>
+                        <outlet property="starWarsScrollView" destination="SpN-fm-CKN" id="cbP-6W-xji"/>
+                        <outlet property="starWarsThree" destination="jT1-Vw-CAL" id="DLt-HM-I73"/>
+                        <outlet property="starWarsTwo" destination="G0U-b8-Q0w" id="3X7-Uf-lAv"/>
+                        <segue destination="hdh-Wa-4YH" kind="show" identifier="fightSegue" id="dCl-zw-dfm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="127" y="135"/>
+            <point key="canvasLocation" x="24.800000000000001" y="165.06746626686657"/>
+        </scene>
+        <!--Battle View Controller-->
+        <scene sceneID="zA2-6V-XkC">
+            <objects>
+                <viewController id="hdh-Wa-4YH" customClass="BattleViewController" customModule="StarWarTrek" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pTk-vm-bWP"/>
+                        <viewControllerLayoutGuide type="bottom" id="fyh-en-GlB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="q1W-XL-cif">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CaptainKirk" translatesAutoresizingMaskIntoConstraints="NO" id="IKg-nP-HWw">
+                                <frame key="frameInset" minX="117" minY="81" width="172" height="191"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CaptainKirk" translatesAutoresizingMaskIntoConstraints="NO" id="0bV-GN-l01">
+                                <frame key="frameInset" minX="117" minY="386" width="172" height="191"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="starTrekImageView" destination="0bV-GN-l01" id="Cnr-FN-J08"/>
+                        <outlet property="starWarsImageView" destination="IKg-nP-HWw" id="Exk-Up-kvL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i1t-5q-Vpd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="852" y="178.56071964017991"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="AnakinJedi" width="256" height="256"/>
+        <image name="CaptainKirk" width="600" height="600"/>
+        <image name="Chewbacca" width="256" height="256"/>
+        <image name="DrMcCoy" width="284" height="269"/>
+        <image name="HanSolo" width="256" height="256"/>
+        <image name="LukeSkywalker" width="256" height="256"/>
+        <image name="Spock" width="600" height="600"/>
+        <image name="Uhuru" width="286" height="384"/>
+    </resources>
 </document>
